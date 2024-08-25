@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stronghold Finder</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="strong.css" />
+    <script type="text/javascript" src="strong.js"></script>
+</head>
+
+<body onLoad="load();"></body>
+
+<body>
+    <div id="title">
+        <h1>Where is the End Portal?</h1>
+        <p>That measure through ender pearls to find end portals</p>
+    </div>
+
+    <div id="content">
+
+        <div id="controls">
+            <h3>Measurement console</h3>
+            <div class="input-container">
+                <label for="x1">Initial X:</label>
+                <input id="x1" name="x1" />
+            </div>
+            <div class="input-container">
+                <label for="y1">Initial Z:</label>
+                <input id="y1" name="y1" />
+            </div>
+            <div class="input-container">
+                <label for="x2">Final X:</label>
+                <input id="x2" name="x2" />
+            </div>
+            <div class="input-container">
+                <label for="y2">Final Z:</label>
+                <input id="y2" name="y2" />
+            </div>
+            <button onClick="newMeasurementButton();">Add List</button>
+            <h3>List</h3>
+            <div id="selectbox">
+                <select id="measurement_list" multiple="True" size="5"></select>
+            </div>
+            <button onClick="deleteMeasurements();">Delete Selected List</button>
+            <h3> </h3>
+            <div id="results"></div>
+        </div>
+
+        <div id="map_frame">
+            <canvas id="map" width="640" height="480"></canvas>
+        </div>
+    </div>
+
+</body>
+
+</html>
